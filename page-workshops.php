@@ -1,17 +1,21 @@
 <?php
 /**
- * The template used for displaying page content in page.php
+ * The template for displaying the workshop page.
  *
- * @package LCCC Framework
+ *
+ * @package lorainccc-welded
  */
+
+get_header(); 
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header subpage-header">
+    <header class="entry-header workshops-header">
+        <?php get_template_part( 'template-parts/content', 'banner' ); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+    <div class="entry-content">
 		<div class="main-content-section">
 			<?php the_content(); ?>
 			<?php
@@ -22,10 +26,5 @@
 			?>
 		</div>
 	</div><!-- .entry-content -->
-
- 	<footer class="entry-footer">
-		 <?php 
-		 //edit_post_link( esc_html__( 'Edit', 'lccc-framework' ), '<span class="edit-link">', '</span>' ); 
-		 ?>
-	</footer><!-- .entry-footer -->
-</article><!-- #post-## -->
+</article>
+<?php get_footer(); ?>

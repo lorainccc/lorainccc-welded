@@ -207,7 +207,8 @@ wp_localize_script( 'lorainccc_welded-function-script', 'screenReaderText', arra
 add_action( 'wp_enqueue_scripts', 'lorainccc_welded_foundation_scripts' );
 
 function lorainccc_welded_scripts() {
-	wp_enqueue_style( 'lorainccc_welded-style', get_stylesheet_uri() );
+	//wp_enqueue_style( 'lorainccc_welded-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'style-min', get_stylesheet_uri() );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
